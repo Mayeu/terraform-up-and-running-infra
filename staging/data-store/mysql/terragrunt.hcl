@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../modules/data-store/mysql"
+  source = "git::git@github.com:Mayeu/terraform-up-and-running-modules.git//data-store/mysql?ref=v0.0.1"
 }
 
 include {

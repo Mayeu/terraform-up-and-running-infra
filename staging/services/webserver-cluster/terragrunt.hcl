@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../modules/services/webserver-cluster"
+  source = "git::git@github.com:Mayeu/terraform-up-and-running-modules.git//services/webserver-cluster?ref=v0.0.1"
 }
 
 include {
