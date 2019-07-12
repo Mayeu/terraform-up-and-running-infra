@@ -11,6 +11,6 @@ dependencies {
 }
 
 inputs = {
-  db_identifier_prefix = "terraform-up-and-running-staging"
-  db_name              = "tuparstaging"
+  db_identifier_prefix = "terraform-up-and-running-production"
+  db_name              = "tuparproduction"
 }

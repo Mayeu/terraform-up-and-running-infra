@@ -10,3 +10,9 @@ remote_state {
   }
 }
 
+
+inputs = {
+  aws_region                   = "us-east-2"
+  tfstate_global_bucket        = "mayeu-test-terraform-up-and-running-state"
+  tfstate_gloabl_bucket_region = "us-east-2"
+}

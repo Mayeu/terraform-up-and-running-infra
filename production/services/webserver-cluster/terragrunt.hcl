@@ -11,11 +11,11 @@ dependencies {
 }
 
 inputs = {
-  cluster_name           = "webserver-staging"
+  cluster_name           = "webserver-production"
   db_remote_state_bucket = "mayeu-test-terraform-up-and-running-state"
-  db_remote_state_key    = "staging/data-store/mysql/terraform.tfstate"
+  db_remote_state_key    = "production/data-store/mysql/terraform.tfstate"
 
   instance_type = "t2.micro"
   min_size      = 2
-  max_size      = 2
+  max_size      = 3
 }
