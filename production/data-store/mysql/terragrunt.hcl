@@ -7,7 +7,7 @@ include {
 }
 
 dependencies {
-  paths = ["../../../global/s3"]
+  paths = ["../../../global/s3", "../../../global/iam"]
 }
 
 inputs = {

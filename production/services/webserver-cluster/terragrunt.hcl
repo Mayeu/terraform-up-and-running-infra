@@ -1,5 +1,5 @@
 terraform {
-  source = "git::git@github.com:Mayeu/terraform-up-and-running-modules.git//services/webserver-cluster?ref=v0.0.1"
+  source = "../../../../modules/services/webserver-cluster/"
 }
 
 include {
@@ -7,7 +7,7 @@ include {
 }
 
 dependencies {
-  paths = ["../../../global/s3", "../../data-store/mysql"]
+  paths = ["../../../global/s3", "../../data-store/mysql", "../../../global/iam"]
 }
 
 inputs = {
@@ -15,7 +15,14 @@ inputs = {
   db_remote_state_bucket = "mayeu-test-terraform-up-and-running-state"
   db_remote_state_key    = "production/data-store/mysql/terraform.tfstate"
 
-  instance_type = "t2.micro"
-  min_size      = 2
-  max_size      = 3
+  instance_type        = "t2.micro"
+  min_size             = 1
+  max_size             = 2
+  enable_autoscaling   = true
+  enable_new_user_data = false
+
+  custom_tags = {
+    Owner      = "team-foo"
+    DeployedBy = "terraform"
+  }
 }
