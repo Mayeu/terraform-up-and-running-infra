@@ -11,6 +11,9 @@ dependencies {
 }
 
 inputs = {
+  ami         = "ami-0c55b159cbfafe1f0"
+  server_text = "New server text"
+
   cluster_name           = "webserver-staging"
   db_remote_state_bucket = "mayeu-test-terraform-up-and-running-state"
   db_remote_state_key    = "staging/data-store/mysql/terraform.tfstate"
